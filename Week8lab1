@@ -1,0 +1,30 @@
+def main():
+    # Recursive Function
+    print("Factoral results using a recursive funciton")
+    print("0! =", factRecursive(0))
+    print("5! =", factRecursive(5))
+    print("10! =", factRecursive(10))
+    print("25! =", factRecursive(25))
+    print("50! =", factRecursive(50))
+    print("100! =", factRecursive(100))
+    # Iterative Function
+    print(f"Factoral results using an iterative function")
+    print("0! =", factIterate(0))
+    print("5! =", factIterate(5))
+    print("10! =", factIterate(10))
+    print("25! =", factIterate(25))
+    print("50! =", factIterate(50))
+    print("100! =", factIterate(100))
+def factIterate(num):
+    factorial = 1
+    for number in range(2,num+1):
+        factorial = number * factorial
+    return factorial
+def factRecursive(num):
+    if num == 0 or num == 1:
+        return 1
+    else:
+        return num * factRecursive(num-1)
+
+if __name__ == "__main__":
+    main()
